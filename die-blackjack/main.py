@@ -22,8 +22,10 @@ if __name__ == '__main__':
         to_roll = input("Czy chcesz rzucic ponownie? T/N\n").upper()
         if to_roll == "T":
             user.player_roll()
-        else:
+        elif to_roll == "N":
             break
+        else:
+            print("Wpisz 'T' lub 'N'.")
 
     print(f"Wyrzucone przez Ciebie oczka: {user.get_dice_value()}\n"
           f"Wyrzucone oczka przez Komputer: {pc.get_dice_value()}")

@@ -34,4 +34,4 @@ class Note:
         return False
 
     def __str__(self):
-        return f"{self.id}: ({self._tag}), {self._text}"
+        return f"{self.id}: {self._text}. #{self._text} {self._date}"

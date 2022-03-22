@@ -13,18 +13,17 @@ class Menu:
 
     def show_menu(self):
         print("Wybierz opcje notatnika ktora chcesz uzyc:")
-        for option_id, option in self.options:
-            print(f"{option_id}: {option}")
+        for option_id, option in self.options.items():
+            print(f"{option_id}: {option.__name__}")
 
     def run(self):
-        for number, option in self.options.items():
-            print(f" {number}. {option.__name__}")
+        self.show_menu()
         user_id = input("Wybierz polecenie ktore chcesz wykonac: ")
         if user_id not in self.options.keys():
             print("Podales bledna opcje, sprobuj jeszcze raz.")
         else:
             to_quit = self.options[user_id]()
-        return to_quit
+            return to_quit
 
     def show_notes(self, searched=""):
         if not searched:

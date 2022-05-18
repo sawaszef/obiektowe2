@@ -9,4 +9,5 @@ class NameNotAlphaException(Exception):
 class IncorrectMark(Exception):
     pass
 
-
+class IncorrectWeigh(Exception):
+    pass
